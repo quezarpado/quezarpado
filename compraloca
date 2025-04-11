@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CompraLoca</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #333;
+    }
+    header {
+      background: #ff00aa;
+      text-align: center;
+      padding: 1em;
+      color: white;
+    }
+    header img {
+      width: 280px;
+      max-width: 80%;
+    }
+    nav {
+      background: #ff66c4;
+      padding: 1em;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 10px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    section {
+      padding: 2em;
+    }
+    .productos, .ofertas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1em;
+    }
+    .item {
+      border: 2px solid #eee;
+      padding: 1em;
+      border-radius: 10px;
+      text-align: center;
+      background: #fdfdfd;
+    }
+    footer {
+      background: #ff00aa;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      margin-top: 2em;
+    }
+    .redes a {
+      margin: 0 10px;
+      color: white;
+      font-size: 1.3em;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="CompraLoca logo" />
+    <h1>Donde la locura es comprar</h1>
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#productos">Productos</a>
+    <a href="#ofertas">Ofertas</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="inicio">
+    <h2>Bienvenidos a CompraLoca</h2>
+    <p>Todo en tecnología, bazar y más... ¡con precios locos!</p>
+  </section>
+
+  <section id="productos">
+    <h2>Productos</h2>
+    <div class="productos">
+      <div class="item">Auriculares Bluetooth</div>
+      <div class="item">Set de Cocina</div>
+      <div class="item">Luz LED con Control</div>
+    </div>
+  </section>
+
+  <section id="ofertas">
+    <h2>Ofertas Locas</h2>
+    <div class="ofertas">
+      <div class="item">Tablet 7" - 40% OFF</div>
+      <div class="item">Organizador Multiuso - 2x1</div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Escribinos por nuestras redes:</p>
+    <div class="redes">
+      <a href="https://wa.me/5491123456789" target="_blank">WhatsApp</a>
+      <a href="https://www.facebook.com/compraloca" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/compraloca" target="_blank">Instagram</a>
+      <a href="https://www.tiktok.com/@compraloca" target="_blank">TikTok</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 CompraLoca - Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>
