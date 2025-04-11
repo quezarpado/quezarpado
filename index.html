@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quezarpado - Tecnología al límite</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #0d0d0d;
+      color: #f0f0f0;
+    }
+    header {
+      background: #1a1a1a;
+      padding: 1em;
+      text-align: center;
+    }
+    header img {
+      height: 60px;
+    }
+    nav {
+      background: #2a2a2a;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      padding: 1em 0;
+    }
+    nav a {
+      color: #ff66cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 2em;
+    }
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5em;
+    }
+    .producto {
+      background: #1a1a1a;
+      padding: 1em;
+      border-radius: 8px;
+    }
+    .producto button {
+      margin-top: 0.5em;
+      padding: 0.5em;
+      background: #ff66cc;
+      border: none;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    footer {
+      background: #1a1a1a;
+      text-align: center;
+      padding: 1em;
+      margin-top: 2em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo_fucsia.png" alt="Logo Quezarpado">
+  </header>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#productos">Productos</a>
+    <a href="#nosotros">Sobre Nosotros</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="inicio">
+    <h1>Bienvenidos a Quezarpado</h1>
+    <p>Tu tienda de tecnología con lo último en gadgets, computadoras, celulares y más.</p>
+  </section>
+
+  <section id="productos">
+    <h2>Productos Destacados</h2>
+    <div class="productos">
+      <div class="producto">
+        <h3>Smartphone Z1</h3>
+        <p>Pantalla AMOLED, 128GB, 5G</p>
+        <button onclick="agregarAlCarrito('Smartphone Z1')">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <h3>Auriculares Pro</h3>
+        <p>Cancelación de ruido, inalámbricos</p>
+        <button onclick="agregarAlCarrito('Auriculares Pro')">Agregar al carrito</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <p>En Quezarpado nos apasiona la tecnología. Elegimos lo mejor del mercado para vos y te lo traemos a precios increíbles.</p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <form onsubmit="return validarFormulario()">
+      <input type="text" id="nombre" placeholder="Tu nombre" required><br><br>
+      <input type="email" id="email" placeholder="Tu email" required><br><br>
+      <textarea id="mensaje" placeholder="Tu mensaje" required></textarea><br><br>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Quezarpado. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function agregarAlCarrito(producto) {
+      alert(producto + " agregado al carrito!");
+    }
+
+    function validarFormulario() {
+      const nombre = document.getElementById('nombre').value;
+      const email = document.getElementById('email').value;
+      const mensaje = document.getElementById('mensaje').value;
+      if (!nombre || !email || !mensaje) {
+        alert("Por favor, completá todos los campos.");
+        return false;
+      }
+      alert("Mensaje enviado. Gracias por contactarnos!");
+      return true;
+    }
+  </script>
+</body>
+</html>
